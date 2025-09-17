@@ -1,0 +1,206 @@
+* { box-sizing: border-box; }
+:root{
+  --bg: #0b1220;         
+  --panel: #111827;       
+  --panel-2: #0f172a;     
+  --text: #e5e7eb;        
+  --muted: #94a3b8;      
+  --line: #1f2937;        
+  --accent: #38bdf8;      
+  --accent-strong:#0ea5e9;
+  --accent-hover:#0284c7;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+a { color: inherit; text-decoration: none; }
+
+.navbar {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 20px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: saturate(120%) blur(4px);
+}
+.brand { font-weight: 800; letter-spacing: .5px; }
+.nav { display: flex; gap: 10px; flex-wrap: wrap; }
+.nav-link {
+  padding: 8px 12px; border-radius: 10px; font-weight: 600;
+  transition: background .2s ease, color .2s ease, transform .08s ease;
+  color: var(--text);
+}
+.nav-link:hover { background: #111827aa; transform: translateY(-1px); }
+.nav-link.active { background: var(--accent-strong); color: #0b1220; }
+
+.hero {
+  position: relative;
+  min-height: 60vh;
+  background-position: center;
+  background-size: cover;
+  display: grid; place-items: center;
+  border-bottom: 1px solid var(--line);
+}
+.hero::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(2,6,23,.55), rgba(2,6,23,.75));
+  z-index: 1;
+}
+.hero-overlay {
+  position: relative; z-index: 2;
+  text-align: center;
+  color: var(--accent);          
+  padding: 24px;
+  text-shadow: 0 1px 8px rgba(0,0,0,.35);
+}
+.hero-title { font-size: clamp(28px, 6vw, 54px); margin: 0 0 8px; }
+.hero-sub   { opacity: .9; margin: 0; color: var(--text); }
+
+.section-title {
+  text-align: center;
+  margin: 24px 0 28px;
+  color: var(--text);
+}
+.cta { padding: 14px 16px 20px; }
+.cta-card {
+  max-width: 1000px; margin: 0 auto;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px; overflow: hidden;
+  display: grid; grid-template-columns: 3fr 2fr;
+  box-shadow: 0 6px 24px rgba(0,0,0,.35);
+}
+.cta-img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  min-height: 220px; background: #0b1220;
+  filter: saturate(110%);
+}
+.cta-text {
+  padding: 14px 20px;
+  display: grid; align-content: center; justify-items: start; gap: 8px;
+  max-width: 400px;
+  color: var(--text);
+}
+.cta-text h2 { margin: 0; font-size: 22px; line-height: 1.35; font-weight: 800; }
+.cta-text p  { margin: 0; font-size: 16px; line-height: 1.55; color: var(--muted); }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 8px 14px; border-radius: 10px; font-weight: 700;
+  border: 2px solid transparent; font-size: 14px; width: auto; white-space: nowrap;
+  transition: background .2s ease, border-color .2s ease, transform .08s ease;
+}
+.cta-text .btn { align-self: start; }
+.btn.primary { background: var(--accent-strong); color: #05121b; }
+.btn.primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+
+.products { display: grid; gap: 14px; padding: 16px; }
+.product-row {
+  display: grid; grid-template-columns: 120px 1fr;
+  gap: 14px; align-items: center;
+  padding: 14px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0,0,0,.25);
+}
+.product-img {
+  width: 120px; height: 120px; object-fit: cover;
+  border-radius: 10px; background: #0b1220; border: 1px solid var(--line);
+}
+.product-info h2 { margin: 0 0 6px; color: var(--text); }
+.price { margin: 0 0 4px; font-weight: 700; color: var(--accent); }
+.stock { margin: 0 0 6px; font-weight: 600; }
+.stock.in  { color: #22c55e; } 
+.stock.out { color: #f87171; } 
+.desc { margin: 0; color: var(--muted); }
+
+.contact { padding: 20px; display: grid; place-items: center; }
+.contact-card {
+  width: min(820px, 92vw);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.35);
+}
+.contact-card h1 { margin-top: 0; color: var(--text); }
+.contact-card p  { color: var(--muted); }
+.socials { margin-top: 12px; display: flex; gap: 10px; }
+.social-btn {
+  width: 44px; height: 44px; display: inline-grid; place-items: center;
+  border-radius: 10px; border: 1px solid var(--line); background: var(--panel-2);
+  transition: transform .08s ease, background .2s ease, border-color .2s ease;
+}
+.social-btn:hover { transform: translateY(-2px); background: #0b1220; border-color: var(--accent); }
+.social-btn img { width: 24px; height: 24px; display: block; }
+
+.footer {
+  padding: 20px;
+  background: var(--panel-2);
+  color: var(--muted);
+  text-align: center;
+  border-top: 1px solid var(--line);
+}
+.copy { margin: 8px 0 0; opacity: .9; }
+
+@media (max-width: 900px) {
+  .cta-card { grid-template-columns: 1fr; }
+  .cta-text { padding: 12px 16px; gap: 8px; max-width: 100%; }
+  .btn { padding: 8px 12px; font-size: 13.5px; }
+  .product-row { grid-template-columns: 100px 1fr; }
+  .product-img { width: 100px; height: 100px; }
+}
+
+.chatbot {
+  background: var(--bg);
+  text-align: center;
+  padding: 10px;
+}
+
+.chat-box {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+#chat-log {
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  height: 150px;
+  overflow: auto;
+  margin-bottom: 8px;
+  padding: 6px;
+  text-align: left;
+  font-size: 14px;
+  color: var(--text);
+}
+
+#user-input {
+  width: 70%;
+  padding: 5px;
+  margin-right: 5px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--panel-2);
+  color: var(--text);
+}
+
+.chat-box button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  background: var(--accent-strong);
+  color: #000;
+  cursor: pointer;
+}
+
+.chat-box button:hover {
+  background: var(--accent-hover);
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BSCS25061 — Contact</title>
+
+
+  <link rel="stylesheet" href="BSCS25061_style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="brand">PandaTech</div>
+    <nav class="nav">
+      <a class="nav-link" href="BSCS25061_Home.html">HOME</a>
+      <a class="nav-link" href="BSCS25061_Products.html">PRODUCTS</a>
+      <a class="nav-link active" href="BSCS25061_Contact.html">ABOUT US</a>
+    </nav>
+  </header>
+
+  <main class="contact">
+    <section class="contact-card">
+      <h1>About Us &amp; Contact</h1>
+
+      <p><strong>Cell:</strong> +92-3411570931</p>       
+      <p><strong>Email:</strong> bscs25061@itu.edu.pk</p> 
+      <p><strong>Location:</strong> Lahore, Pakistan</p>     
+
+      <hr />
+      <form id="contact-form" onsubmit="return validateForm()">
+      <p><label>Name<br><input id="contact-name" type="text" placeholder="Your name"></label></p>
+      <p><label>Email<br><input id="contact-email" type="email" placeholder="you@example.com"></label></p>
+      <p><label>Message<br><textarea id="contact-message" rows="4" placeholder="How can we help?"></textarea></label></p>
+      <p><button class="btn primary" type="submit">Send Message</button></p>
+      </form>
+
+      <p>We build simple, reliable products that make everyday life easier. Connect with us:</p>
+
+      <div class="socials">
+        <a href="https://facebook.com" target="_blank" class="social-btn" aria-label="Facebook">
+          <img src="BSCS25061_image7.png" alt="Facebook logo" />
+        </a>
+
+        <a href="https://instagram.com" target="_blank" class="social-btn" aria-label="Instagram">
+          <img src="BSCS25061_image8.png" alt="Instagram logo" />
+        </a>
+
+        <a href="https://www.linkedin.com/in/muhammad-abdullah-a0a1b230b/" target="_blank" class="social-btn" aria-label="LinkedIn">
+          <img src="BSCS25061_image9.png" alt="LinkedIn logo" />
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer small">
+    <p class="copy">© <span id="year"></span> - BSCS25061 — PandaTech</p>
+  </footer>
+  <script src="BSCS25061_script.js"></script>
+</body>
+</html>

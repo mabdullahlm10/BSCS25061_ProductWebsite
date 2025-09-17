@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BSCS25061 — Products</title>
+
+  <link rel="stylesheet" href="BSCS25061_style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+
+    <div class="brand">PandaTech</div>
+    <nav class="nav">
+      <a class="nav-link" href="BSCS25061_Home.html">HOME</a>
+      <a class="nav-link active" href="BSCS25061_Products.html">PRODUCTS</a>
+      <a class="nav-link" href="BSCS25061_Contact.html">ABOUT US</a>
+    </nav>
+  </header>
+
+  <main class="products">
+
+    <article class="product-row">
+ 
+      <img src="BSCS25061_image2.png" alt="PandaBuds (wireless earbuds)" class="product-img" />
+      <div class="product-info">
+        <h2>PandaBuds</h2>
+        <p class="price">Rs. 12,999</p>
+        <p id="stock1" data-name="PandaBuds" class="stock in">Availability: In Stock</p>
+        <p class="desc">
+          Wireless earbuds with clear sound, snug fit, and long battery life.
+          Great for music, calls, and workouts.
+        </p>
+        <button class="btn primary" onclick="checkStock('stock1')">Check availability</button>
+      </div>
+    </article>
+
+    <article class="product-row">
+      <img src="BSCS25061_image3.png" alt="PandaWatch (smartwatch)" class="product-img" />
+      <div class="product-info">
+        <h2>PandaWatch</h2>
+        <p class="price">Rs. 19,999</p>
+        <p id="stock2" data-name="PandaWatch" class="stock out">Availability: Out of stock</p>
+        <p class="desc">
+          Elegant smartwatch with health tracking, GPS, and a 7-day battery.
+          Comfortable design for daily wear.
+        </p>
+        <button class="btn primary" onclick="checkStock('stock2')">Check availability</button>
+      </div>
+    </article>
+
+    <article class="product-row">
+      <img src="BSCS25061_image4.png" alt="PandaBook Air (laptop)" class="product-img" />
+      <div class="product-info">
+        <h2>PandaBook Air</h2>
+        <p class="price">Rs. 149,999</p>
+        <p id="stock3" data-name="PandaBook Air" class="stock in">Availability: In Stock</p>
+        <p class="desc">
+          Ultra-light laptop with a vivid display and fast SSD.
+          Ideal for study, work, and entertainment.
+        </p>
+        <button class="btn primary" onclick="checkStock('stock3')">Check availability</button>
+      </div>
+    </article>
+
+    <article class="product-row">
+      <img src="BSCS25061_image5.png" alt="PandaPhone X (smartphone)" class="product-img" />
+      <div class="product-info">
+        <h2>PandaPhone X</h2>
+        <p class="price">Rs. 209,999</p>
+        <p id="stock4" data-name="PandaPhone X" class="stock in">Availability: In Stock</p>
+        <p class="desc">
+          Pro-grade camera, 120Hz display, and super-fast charging,
+          built for creators and power users.
+        </p>
+        <button class="btn primary" onclick="checkStock('stock4')">Check availability</button>
+      </div>
+    </article>
+
+    <article class="product-row">
+      <img src="BSCS25061_image6.png" alt="PandaTab (tablet)" class="product-img" />
+      <div class="product-info">
+        <h2>PandaTab</h2>
+        <p class="price">Rs. 84,999</p>
+        <p id="stock5" data-name="PandaTab" class="stock in">Availability: In Stock</p>
+        <p class="desc">
+          Versatile tablet for notes, reading, and sketching.
+          Lightweight and long-lasting for on-the-go use.
+        </p>
+        <button class="btn primary" onclick="checkStock('stock5')">Check availability</button>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer small">
+    <p class="copy">© <span id="year"></span> - BSCS25061 — PandaTech</p>
+  </footer>
+  <script src="BSCS25061_script.js"></script>
+</body>
+</html>
