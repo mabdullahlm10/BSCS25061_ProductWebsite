@@ -1,8 +1,20 @@
-# BSCS25061_ProductWebsite
+# PandaTech Website
 
-Lab 5 project for web development.
+A multi-page product website built with HTML, CSS, and JavaScript.
 
-- Home page: welcome popup + current year shown in footer
-- Products page: check availability buttons
-- Contact page: simple form validation for name and email as well as conducting a presence check for all three fields
-- Chatbot: basic if-else replies
+## Pages
+- **Home** — Hero section, about us, chatbot support widget
+- **Products** — 5 product listings with live stock availability checker
+- **Contact** — Form validation, social media links
+
+## Features
+- Sticky navbar with active page highlighting
+- Welcome popup on page load
+- Dynamic footer year via JavaScript
+- Product availability checker
+- Contact form validation (name, email, message)
+- If-else rule based support chatbot
+- Fully responsive layout
+
+## Built With
+- HTML5, CSS3, JavaScript (vanilla)
